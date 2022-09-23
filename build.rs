@@ -20,7 +20,7 @@ fn add_spectre_link_search() {
     };
 
     let tool = windows_registry::find_tool(&target, "cl.exe").expect("couldn't find cl.exe");
-    let spectre_libs = tool.path().join(format!(r"..\..\..\..\lib\spectre\{arch}"));
+    let spectre_libs = tool.path().join(format!(r"..\..\..\..\atlmfc\lib\spectre\{arch}"));
 
     if Path::new(&spectre_libs).exists() {
         println!(
